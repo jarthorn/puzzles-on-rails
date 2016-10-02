@@ -1,0 +1,2 @@
+class MagicSquareController < ApplicationController
+end

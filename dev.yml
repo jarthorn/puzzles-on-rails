@@ -1,0 +1,24 @@
+---
+name: railtest
+up:
+- homebrew:
+  - openssl
+  - phantomjs
+- ruby: 2.3.1
+- bundler
+commands:
+  console:
+    desc: start a rails console
+    run: bin/rails console
+  server:
+    desc: start a rails server
+    run: bin/rails server -p 51483
+  test:
+    syntax:
+      argument: file
+      optional: args...
+    desc: run tests
+    run: bin/rake test
+open:
+  My Application: http://localhost:51483
+  railtest: http://localhost:51483
