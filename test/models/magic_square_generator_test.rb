@@ -6,10 +6,10 @@ class MagicSquareGeneratorTest < ActionDispatch::IntegrationTest
     @generator = MagicSquareGenerator.new 4
   end
 
-  # test "generates_four_dim_squares" do
-  #   result = @generator.generate_squares(4)
-  #   assert_equal 880, result.size
-  # end
+  test "generates_four_dim_squares" do
+    result = @generator.generate_squares
+    assert_equal 880, result.size
+  end
 
   test 'handles invalid dimensions' do
     assert_raises {
